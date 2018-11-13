@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://booking/./src/components/hello.scss"],"names":[],"mappings":"AAAA;AACA;AACA;AACA,eAAe;AACf;AACA;AACA,2BAA2B","file":"static/css/app.7d5d30392da257e9f707.css","sourcesContent":[".hello {\n  background: #000;\n  height: 100vh;\n  width: 100vw; }\n  .hello .logo {\n    height: 100px;\n    background-size: cover; }\n"],"sourceRoot":""}

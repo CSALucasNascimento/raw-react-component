@@ -1,0 +1,34 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "This component represents amplify auth",
+  "main": "lib/js/authentication.js",
+  "author": "Lucas Nascimento",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.7.3",
+    "@types/react-dom": "^16.0.9",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "webpack-merge": "^4.1.4"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "start": "webpack --config webpack.dev.js --progress --watch",
+    "build": "webpack --config webpack.prod.js --progress",
+    "transpile": "webpack --config webpack.lib.js --progress"
+  }
+}
