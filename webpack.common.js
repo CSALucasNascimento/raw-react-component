@@ -14,6 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         library: 'authentication',
         libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     module: {
         rules: [

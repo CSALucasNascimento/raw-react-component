@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://authentication/./src/components/authentication.scss"],"names":[],"mappings":"AAAA;AACA;AACA;AACA,eAAe;AACf;AACA;AACA,2BAA2B","file":"css/authentication.css","sourcesContent":[".hello {\n  background: #000;\n  height: 100vh;\n  width: 100vw; }\n  .hello .logo {\n    height: 100px;\n    background-size: cover; }\n"],"sourceRoot":""}

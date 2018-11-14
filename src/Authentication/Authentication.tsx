@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './authentication.scss'
+import './Authentication.scss'
 import * as logo from './logo.png'
 
 class Authentication extends React.Component {
@@ -7,7 +7,8 @@ class Authentication extends React.Component {
   render() {
     return (
       <div className='authentication'>
-        <img src={logo} className='logo'/>
+      Auth
+        {/* <img src={logo} className='logo'/> */}
       </div>
     )
   }

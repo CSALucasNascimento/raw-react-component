@@ -2,7 +2,8 @@
   "name": "authentication",
   "version": "1.0.0",
   "description": "This component represents amplify auth",
-  "main": "lib/js/authentication.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Lucas Nascimento",
   "license": "MIT",
   "dependencies": {
@@ -29,6 +30,7 @@
   "scripts": {
     "start": "webpack --config webpack.dev.js --progress --watch",
     "build": "webpack --config webpack.prod.js --progress",
-    "transpile": "webpack --config webpack.lib.js --progress"
+    "transpile": "webpack --config webpack.lib.js --progress",
+    "lib": "tsc -p ."
   }
 }
