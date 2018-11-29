@@ -8,7 +8,7 @@ module.exports = {
     mode: 'production',
     devtool: 'source-map',
     entry: {
-        authentication: './src/components/authentication.tsx'
+        authentication: './src/components/authentication.jsx'
     },
     output: {
         filename: 'js/[name].js',
