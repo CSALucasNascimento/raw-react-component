@@ -1,0 +1,8 @@
+{
+  "name": "signup",
+  "version": "1.0.0",
+  "description": "This component represents signup",
+  "main": "SignUp.jsx",
+  "author": "Lucas Nascimento",
+  "license": "MIT"
+}

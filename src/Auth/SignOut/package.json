@@ -1,0 +1,8 @@
+{
+  "name": "signout",
+  "version": "1.0.0",
+  "description": "This component represents signout",
+  "main": "SignOut.jsx",
+  "author": "Lucas Nascimento",
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "confirmsignup",
+  "version": "1.0.0",
+  "description": "This component represents signup confirmation",
+  "main": "ConfirmSignUp.jsx",
+  "author": "Lucas Nascimento",
+  "license": "MIT"
+}
