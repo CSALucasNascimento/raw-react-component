@@ -6,39 +6,46 @@ class Login extends React.Component {
 
   constructor(props) {
     super(props);
+    this.inputs = {};
     this.state = this.getInitialState();
   }
 
   getInitialState = () => ({
-    email: '',
-    password: ''
+    error: ''
   })
 
   handleChange = (e) => {
     const { name, value } = e.target
-    this.setState({
-        ...this.state, [name]: value
-    })
+    this.inputs[name] = value
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password } = this.state;
+    const { email, password } = this.inputs;
     Auth.signIn(email, password)
-        .then(user => console.log(user))
-        .catch(err => console.log(err));
+        .then(user => this.loginSuccess())
+        .catch(err => this.loginError(err))
+  }
+
+  loginSuccess = () => {
+    this.getInitialState();
+  }
+
+  loginError = (err) => {
+    let message = err.message || err
+    this.setState({ error: message })
   }
 
   render() {
 
-    const { email, password } = this.state;
+    const { error } = this.state;
     
     return (
       <div className="login">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Email</label>
-            <input type="email" name="email" className="form-control" placeholder="Email" value={email} onChange={ this.handleChange} required />
+            <input type="email" name="email" className="form-control" placeholder="Email" onChange={this.handleChange} autoFocus required />
             <small className="form-text text-muted">
               We'll never share your email with anyone else.
             </small>
@@ -48,7 +55,7 @@ class Login extends React.Component {
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input type="password" name="password" className="form-control" placeholder="********" value={password} onChange={this.handleChange} required />
+            <input type="password" name="password" className="form-control" placeholder="********" onChange={this.handleChange} autoFocus required />
             <div className="invalid-feedback">
                 Please choose a password.
             </div>
@@ -60,6 +67,7 @@ class Login extends React.Component {
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
+          { error && <div className="alert alert-danger fixed-bottom" role="alert">{error}</div> }
         </form>
       </div>
     );
